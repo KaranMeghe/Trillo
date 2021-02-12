@@ -1,0 +1,15 @@
+{
+  "name": "trilo",
+  "version": "1.0.0",
+  "description": "web app for all in one travelling services ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "karan",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
