@@ -1,0 +1,124 @@
+.container {
+    max-width: 120rem;
+    min-height: 50rem;
+    margin: 8rem auto;
+    background: var( --color-Grey-light-1);
+    box-shadow: var(--shadow-dark);
+}
+
+.header {
+    height: 7rem;
+    background: #fff;
+    border-bottom: 1px solid var(--color-Grey-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar{
+    background: var(--color-grey-dark-1);
+    flex: 0 0 18%;                                         // flex : grow shrink basis;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view{
+    flex: 1;
+    
+}
+
+.details{
+ font-size: 1.4rem;
+ display: flex;
+ padding: 4.5rem;
+ background-color: var(--color-Grey-light-1);
+ border-bottom: 1px solid var(--color-Grey-light-2);
+ color: var(--color-grey-dark-2);
+
+}
+
+.description{
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.06);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+//cta
+.cta{
+    padding: 3.5rem 0;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid var(--color-grey-light-3);
+   
+    &__heading{
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+ }
+
+ //btn
+ .btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+         transition: all .2s;
+    }
+
+    &__visible {
+        display: inline-block;
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        display: inline-block;
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
